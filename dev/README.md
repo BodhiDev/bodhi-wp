@@ -4,7 +4,8 @@
 
 The idea is to localize web development using `docker-compose`.
 Download and install (docker)[https://docs.docker.com/engine/install/ubuntu/] and (docker-compose)[https://docs.docker.com/compose/install/] from their respective links.
-`docker-compose up -d` will bring up a default install of docker for now.
+`docker-compose up -d` will bring up a default install of wordpress for now.
+Use `docker-compose down` to stop the services.
 The wordpress files and db folder are under `${HOME}/bodhilinux/{wordpress|db}`, this will in the future made configurable.
 
 ## Todo
