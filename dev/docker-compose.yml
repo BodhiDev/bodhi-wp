@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  wordpress:
+    image: wordpress:5.5.3-apache
+    restart: always
+    volumes:
+      - ${HOME}/bodhilinux/wordpress:/var/lib/mysql
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: bhodhi
+      WORDPRESS_DB_PASSWORD: bodhipass
+      WORDPRESS_DB_NAME: bodhilinux
+    ports: 
+      - 8080:80
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - "${HOME}/bodhilinux/db:/var/lib/mysql"
+    restart: always
+    environment: 
+      MYSQL_DATABASE: bodhilinux
+      MYSQL_USER: bodhi
+      MYSQL_PASSWORD: bodhipass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+  
