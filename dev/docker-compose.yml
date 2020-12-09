@@ -7,7 +7,7 @@ services:
       - ${HOME}/bodhilinux/wordpress:/var/lib/mysql
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: bhodhi
+      WORDPRESS_DB_USER: bodhi
       WORDPRESS_DB_PASSWORD: bodhipass
       WORDPRESS_DB_NAME: bodhilinux
     ports: 
@@ -23,4 +23,3 @@ services:
       MYSQL_USER: bodhi
       MYSQL_PASSWORD: bodhipass
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
-  
